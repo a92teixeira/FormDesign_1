@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Design - HTML and CSS</title>
+
+   <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+   <div class="container-fluid">
+      <div class="container">
+         <div class="formBox">
+            <form action="">
+               <!--ROW CONTACT US-->
+               <div class="row">
+                  <div class="col-12">
+                     <h1>Contact Us</h1>
+                  </div>
+               </div>
+
+               <!--ROW NAME-->
+               <div class="row">
+                  <div class="col-6">
+                     <div class="inputBox focus">
+                        <div class="inputText">First Name:</div>
+                        <input type="text" name="" class="input">
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="inputBox">
+                        <div class="inputText">Last Name:</div>
+                        <input type="text" name="" class="input">
+                     </div>
+                  </div>
+               </div><!-- FIM ROW NAME -->   
+            
+               <!-- ROW EMAIL/MOBILE -->
+               <div class="row">
+                  <div class="col-6">
+                     <div class="inputBox">
+                        <div class="inputText">Email:</div>
+                        <input type="text" class="input">
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="inputBox">
+                        <div class="inputText">Mobile:</div>
+                        <input type="text" class="input">
+                     </div>
+                  </div>
+               </div>
+
+               <!--ROW EMAIL AREA-->
+               <div class="row">
+                  <div class="col-12">
+                     <div class="inputBox">
+                        <div class="inputText">Email:</div>
+                        <textarea class="input"></textarea>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- ROW SUBMIT -->
+               <div class="row">
+                  <div class="col-12">
+                     <input type="submit" value="Send Message" class="button">
+                  </div>
+               </div>
+               
+            </form>
+         </div><!--FIM FORMBOX-->
+      </div><!--FIM CONTAINER-->
+   </div><!--FIM CONTAINER-FLUID-->
+
+
+</section>
+   
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+   $(".input").focus(function(){
+      $(this).parent().addClass('focus');
+   }).blur(function(){
+      if($(this).val() === ''){
+         $(this).parent().removeClass('focus'); 
+      }
+   })
+</script>
+
+</body>
+</html>
